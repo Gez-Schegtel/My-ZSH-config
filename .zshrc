@@ -117,7 +117,12 @@ alias ls='lsd'
 # Alias para bat
 alias cat='batcat'
 
+# Alias para crear un archivo markdown con el formato para exportar a PDF con Pandoc.
+alias markdown-pandoc='cp ~/Plantillas/Archivo\ Markdown\ v7.md .'
+
 #Alias para activar el Python Virtual Environment
 alias python-venv='source /home/juani/.venvs/My\ Python\ venv/bin/activate'
-alias jupyter-venv='source /home/juani/.venvs/jupyter-notebooks/bin/activate'
+alias moodle-dl-venv='source ~/.venvs/moodle-dl/bin/activate'
 
+# Added by Antigravity CLI installer
+export PATH="/home/juani/.local/bin:$PATH"
