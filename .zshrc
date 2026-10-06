@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="intheloop"
+ZSH_THEME="refined"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,9 +70,7 @@ ZSH_THEME="intheloop"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	vi-mode)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,27 +100,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
+# Alias para activar entornos virtuales en Python
+alias python-venv="source ~/.venvs/my_python_venv/bin/activate"
+alias moodle-dl-venv="source ~/.venvs/moodle-dl/bin/activate"
 
-#Añado este directorio al PATH para tener los comandos de pip disponibles.
-path+=('/home/juani/.local/bin')
+# Alias para lsd
+alias ls="lsd"
 
+# Alias para bat
+alias cat="batcat"
+
+# Creado por nvm.
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Alias para lsd
-alias ls='lsd'
-
-# Alias para bat
-alias cat='batcat'
-
-# Alias para crear un archivo markdown con el formato para exportar a PDF con Pandoc.
-alias markdown-pandoc='cp ~/Plantillas/Archivo\ Markdown\ v7.md .'
-
-#Alias para activar el Python Virtual Environment
-alias python-venv='source /home/juani/.venvs/My\ Python\ venv/bin/activate'
-alias moodle-dl-venv='source ~/.venvs/moodle-dl/bin/activate'
-
-# Added by Antigravity CLI installer
-export PATH="/home/juani/.local/bin:$PATH"
